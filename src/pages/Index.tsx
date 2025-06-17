@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
-import { ArrowDown, ArrowUp } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 
 interface PredictionResult {
   final_prediction: string;
@@ -183,19 +182,19 @@ const Index = () => {
                 <div className="bg-blue-500/20 px-4 py-2 rounded-lg border border-blue-400/30">
                   Raw Text
                 </div>
-                <ArrowDown className="text-blue-400" />
+                <ArrowRight className="text-blue-400" />
                 <div className="bg-purple-500/20 px-4 py-2 rounded-lg border border-purple-400/30">
                   Preprocessing
                 </div>
-                <ArrowDown className="text-purple-400" />
+                <ArrowRight className="text-purple-400" />
                 <div className="bg-green-500/20 px-4 py-2 rounded-lg border border-green-400/30">
                   TF-IDF Vectorization
                 </div>
-                <ArrowDown className="text-green-400" />
+                <ArrowRight className="text-green-400" />
                 <div className="bg-orange-500/20 px-4 py-2 rounded-lg border border-orange-400/30">
                   ML Model
                 </div>
-                <ArrowDown className="text-orange-400" />
+                <ArrowRight className="text-orange-400" />
                 <div className="bg-red-500/20 px-4 py-2 rounded-lg border border-red-400/30">
                   Sentiment Prediction
                 </div>
@@ -229,10 +228,10 @@ const Index = () => {
                 {isAnalyzing ? 'Analyzing...' : 'Analyze Sentiment'}
               </Button>
               <Button 
-                variant="outline" 
+                variant="secondary" 
                 onClick={handleSampleReview}
                 disabled={isAnalyzing}
-                className="border-white/20 text-white hover:bg-white/10"
+                className="bg-white/20 text-white hover:bg-white/30 border-white/20"
               >
                 Try a Sample
               </Button>
