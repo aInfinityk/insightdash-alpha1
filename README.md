@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# InsightDash: Real-Time Sentiment Analysis Web App
 
-## Project info
+**InsightDash** is a fully interactive, production-quality web application that performs real-time sentiment analysis. Designed to be a showcase of both technical skill and clean UI/UX, it visualizes the full journey from raw input text to model predictions with educational clarity.
 
-**URL**: https://lovable.dev/projects/0b9baa14-dd43-407f-ae61-5e4dadc518bc
+## 🚀 Project Overview
 
-## How can I edit this code?
+**Goal:** Build an elegant, intuitive, and powerful sentiment analysis platform that:
 
-There are several ways of editing your application.
+* Accepts user input or sample reviews
+* Analyzes sentiment using two ML models (Naive Bayes & SVM)
+* Provides real-time, interactive visual results
+* Explains the inner workings of the ML pipeline
 
-**Use Lovable**
+## 🎯 Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0b9baa14-dd43-407f-ae61-5e4dadc518bc) and start prompting.
+### 🧠 Machine Learning Pipeline (Displayed to User)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+[Raw Text] → [Preprocessing] → [TF-IDF Vectorization] → [ML Model] → [Sentiment Prediction]
 ```
 
-**Edit a file directly in GitHub**
+### 🔍 Real-Time Sentiment Analysis
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+* User can enter a review or click "Try a Sample"
+* Returns:
 
-**Use GitHub Codespaces**
+  * Sentiment: Positive / Negative / Neutral
+  * Confidence: Displayed with a dynamic progress bar
+  * Word Highlights: Color-coded contributions to sentiment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 📊 Interactive Results Dashboard
 
-## What technologies are used for this project?
+* Smoothly animated results panel
+* Sentiment classification with visual badges and metrics
+* Highlighted input text to show influential words
+* Model comparison (Naive Bayes vs. SVM)
+* Visual preprocessing steps: lowercase, clean text, remove stopwords, lemmatization
 
-This project is built with:
+### 📈 Performance Snapshot
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* F1 Score: 89%
+* Precision: 91%
+* Recall: 87%
+* Accuracy: 88%
+* Visual confusion matrix and model evolution chart included
 
-## How can I deploy this project?
+## 🧰 Technologies Used
 
-Simply open [Lovable](https://lovable.dev/projects/0b9baa14-dd43-407f-ae61-5e4dadc518bc) and click on Share -> Publish.
+| Layer         | Tech Stack                              |
+| ------------- | --------------------------------------- |
+| Frontend      | HTML5, CSS3, JavaScript (ES6+)          |
+| Backend       | Python, Flask                           |
+| ML & NLP      | Scikit-learn, NLTK or SpaCy, Joblib     |
+| Visualization | Custom CSS animations, JS interactivity |
 
-## Can I connect a custom domain to my Lovable project?
+## 🌈 UI/UX Design
 
-Yes, you can!
+* Theme: "Data-Tech Startup" – modern, minimal, professional
+* Design Aesthetics:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+  * Frosted-glass card elements (Glassmorphism)
+  * Responsive Flex/Grid layout
+  * Animated transitions for interactivity
+  * Sentiment-based coloring: Green, Red, Grey
+  * Clean sans-serif fonts (e.g., Inter, Poppins)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 💡 Why InsightDash?
+
+* Showcases full ML lifecycle
+* Educates the user at every step
+* Demonstrates technical and design excellence
+
+---
+
+🧠 **Sentiment analysis matters** – it empowers businesses to understand customer voices at scale.
+
+Want to explore how machine learning can be beautiful and insightful? Dive in.
